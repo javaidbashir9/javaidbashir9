@@ -3,104 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            font-family: sans-serif;
-            overflow: hidden;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        h1, p {
-            font-size: 3em;
-            color: #333;
-            position: relative;
-            display: inline-block; /* Crucial for relative positioning of spans */
-            transition: all 0.3s ease; /* Smooth transition for hover effect */
-        }
-
-        h1:hover span, p:hover span {
-            transform: translate(calc(var(--x) * 20px), calc(var(--y) * 20px)); /* Disperse effect */
-            opacity: 0.5; /* Slightly fade out */
-        }
-
-        h1 span, p span{
-            display: inline-block; /* Ensure each letter is treated as a separate element */
-            transition: all 0.3s ease;
-        }
-
-        .construction-animation {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .construction-animation .barricade {
-            position: absolute;
-            width: 100px;
-            height: 20px;
-            background-color: #ffc107;
-            animation: moveBarricade 5s linear infinite alternate;
-            border-radius: 5px;
-        }
-        .construction-animation .barricade:nth-child(even) {
-            background-color: #ff9800;
-        }
-
-        @keyframes moveBarricade {
-            0% {
-                left: -100px;
-            }
-            100% {
-                left: 100vw;
-            }
-        }
-    </style>
+    <title>Under Construction - Dino Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 id="title">Under Construction</h1> <br> 
-        <p id="subtitle">Stay tuned!!</p>
+    <div class="game-container">
+        <div id="dino"></div>
+        <div id="cactus"></div>
+        <div id="ground"></div>
+        <div id="score">Score: 0</div>
+        <div id="game-over">Game Over! Press Space to Restart</div>
     </div>
-
-    <div class="construction-animation">
-        <script>
-            const animationContainer = document.querySelector('.construction-animation');
-            for (let i = 0; i < 10; i++) {
-                const barricade = document.createElement('div');
-                barricade.classList.add('barricade');
-                barricade.style.top = `${Math.random() * 100}vh`;
-                barricade.style.animationDelay = `${Math.random() * 5}s`;
-                animationContainer.appendChild(barricade);
-            }
-
-            function disperseText(elementId) {
-                const element = document.getElementById(elementId);
-                const text = element.textContent;
-                element.innerHTML = ""; // Clear existing text
-
-                for (let i = 0; i < text.length; i++) {
-                    const span = document.createElement("span");
-                    span.textContent = text[i];
-                    span.style.setProperty("--x", Math.random() - 0.5); // Random horizontal offset
-                    span.style.setProperty("--y", Math.random() - 0.5); // Random vertical offset
-                    element.appendChild(span);
-                }
-            }
-
-            disperseText("title");
-            disperseText("subtitle");
-        </script>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
