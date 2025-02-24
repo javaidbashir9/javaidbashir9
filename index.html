@@ -20,21 +20,22 @@
             text-align: center;
         }
 
-        h1 {
+        h1, p {
             font-size: 3em;
-            margin-bottom: 20px;
             color: #333;
-            white-space: nowrap; /* Prevent text wrapping */
-            overflow: hidden;
-            animation: marquee 10s linear infinite;
+            position: relative;
+            display: inline-block; /* Crucial for relative positioning of spans */
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
         }
 
-        p {
-            font-size: 1.5em;
-            color: #666;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: marquee 12s linear infinite;
+        h1:hover span, p:hover span {
+            transform: translate(calc(var(--x) * 20px), calc(var(--y) * 20px)); /* Disperse effect */
+            opacity: 0.5; /* Slightly fade out */
+        }
+
+        h1 span, p span{
+            display: inline-block; /* Ensure each letter is treated as a separate element */
+            transition: all 0.3s ease;
         }
 
         .construction-animation {
@@ -56,15 +57,6 @@
             background-color: #ff9800;
         }
 
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
         @keyframes moveBarricade {
             0% {
                 left: -100px;
@@ -77,8 +69,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Under Construction</h1>
-        <p>Stay tuned!!</p>
+        <h1 id="title">Under Construction</h1>
+        <p id="subtitle">Stay tuned!!</p>
     </div>
 
     <div class="construction-animation">
@@ -91,6 +83,23 @@
                 barricade.style.animationDelay = `${Math.random() * 5}s`;
                 animationContainer.appendChild(barricade);
             }
+
+            function disperseText(elementId) {
+                const element = document.getElementById(elementId);
+                const text = element.textContent;
+                element.innerHTML = ""; // Clear existing text
+
+                for (let i = 0; i < text.length; i++) {
+                    const span = document.createElement("span");
+                    span.textContent = text[i];
+                    span.style.setProperty("--x", Math.random() - 0.5); // Random horizontal offset
+                    span.style.setProperty("--y", Math.random() - 0.5); // Random vertical offset
+                    element.appendChild(span);
+                }
+            }
+
+            disperseText("title");
+            disperseText("subtitle");
         </script>
     </div>
 </body>
