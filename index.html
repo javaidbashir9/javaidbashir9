@@ -13,10 +13,10 @@
             margin: 0;
             background-color: #f4f4f4;
             font-family: sans-serif;
-            overflow: hidden; /* Prevent scrollbars during animation */
+            overflow: hidden;
         }
 
-        ..container {
+        .container {
             text-align: center;
         }
 
@@ -24,21 +24,24 @@
             font-size: 3em;
             margin-bottom: 20px;
             color: #333;
-            animation: fadeIn 2s ease-in-out;
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden;
+            animation: marquee 10s linear infinite;
         }
 
         p {
             font-size: 1.5em;
             color: #666;
-            animation: fadeIn 2s ease-in-out 0.5s forwards;
-            opacity: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 12s linear infinite;
         }
 
         .construction-animation {
             position: absolute;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Allow interaction with elements below */
+            pointer-events: none;
         }
 
         .construction-animation .barricade {
@@ -53,12 +56,12 @@
             background-color: #ff9800;
         }
 
-        @keyframes fadeIn {
+        @keyframes marquee {
             0% {
-                opacity: 0;
+                transform: translateX(100%);
             }
             100% {
-                opacity: 1;
+                transform: translateX(-100%);
             }
         }
 
@@ -84,8 +87,8 @@
             for (let i = 0; i < 10; i++) {
                 const barricade = document.createElement('div');
                 barricade.classList.add('barricade');
-                barricade.style.top = `${Math.random() * 100}vh`; // Random vertical position
-                barricade.style.animationDelay = `${Math.random() * 5}s`; // Random start delay
+                barricade.style.top = `${Math.random() * 100}vh`;
+                barricade.style.animationDelay = `${Math.random() * 5}s`;
                 animationContainer.appendChild(barricade);
             }
         </script>
