@@ -1,16 +1,19 @@
-
-
-
-
-# 💫 About Me:
-### About Me<br><br>- 🔭 I’m currently working as a **Subject Matter Expert (SME) at Cognizant**, supporting Google Cloud Platform (GCP) and helping teams resolve complex technical issues.<br>- 👯 I’m looking to collaborate on **cloud computing, GCP projects, web development, automation, and open-source initiatives.<br>- 🤝 I’m looking for help with **advancing my cloud engineering skills, exploring cloud automation, and building scalable technology solutions.<br>- 🌱 I’m currently learning **cloud technologies, data analytics, cloud operations, and modern web development practices.<br>- 💬 Ask me about **Google Cloud Platform (GCP), Google Workspace, technical troubleshooting, root cause analysis, DNS, SSL, web hosting, WordPress, HTML, CSS, JavaScript, PHP, MySQL, and data analysis**.<br>- ⚡ Fun fact: **I enjoy turning complex technical problems into simple solutions, building websites, and continuously exploring new technologies.
-
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
   <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
   <img alt="javaidbashir9's GitHub profile" src="dark_mode.svg" />
 </picture>
+
+# 💫 About Me:
+### About Me<br><br>- 🔭 I’m currently working as a Subject Matter Expert (SME) at Cognizant, supporting Google Cloud Platform (GCP) and helping teams resolve complex technical issues.<br>- 
+👯 I’m looking to collaborate on cloud computing, GCP projects, web development, automation, and open-source initiatives.<br>- 
+🤝 I’m looking for help with **advancing my cloud engineering skills, exploring cloud automation, and building scalable technology solutions.<br>- 
+🌱 I’m currently learning **cloud technologies, data analytics, cloud operations, and modern web development practices.<br>- 
+💬 Ask me about Google Cloud Platform (GCP), Google Workspace, technical troubleshooting, root cause analysis, DNS, SSL, web hosting, WordPress, HTML, CSS, JavaScript, PHP, MySQL, and data analysis.<br>- 
+⚡ Fun fact: I enjoy turning complex technical problems into simple solutions, building websites, and continuously exploring new technologies.
+
+
+
 
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/javaidbashir.in) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/javaidbashir.in) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/javaidbashir) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/javaidbashir9) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:javaidbashir9@gmail.com) 
